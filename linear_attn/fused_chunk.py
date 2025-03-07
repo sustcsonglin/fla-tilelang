@@ -133,7 +133,7 @@ if __name__ == "__main__":
     assert len(lib_outs) == len(ref_outs)
 
     for lhs, rhs in zip(lib_outs, ref_outs):
-        print(get_err_ratio("Relative error: ", lhs.sum(0), rhs))
+        print("Relative error: ", get_err_ratio(lhs.sum(0), rhs))
         print("If it is < 0.005, it is okayish")
 
     print("Caveat: TFLOPs might be misleading here, but the larger the faster..")
